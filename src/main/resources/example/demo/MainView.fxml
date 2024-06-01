@@ -9,24 +9,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="example.demo.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="example.demo.HelloController">
    <children>
       <ImageView fx:id="settingIcon" fitHeight="46.0" fitWidth="35.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assets/png/settings.png" />
          </image>
       </ImageView>
-      <Label fx:id="titleLable" layoutX="250.0" layoutY="14.0" text="EngHUST">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Button fx:id="statisticsButton" layoutX="144.0" layoutY="77.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="111.0" text="Thống kê">
+      <Button fx:id="statisticsButton" layoutX="127.0" layoutY="77.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="111.0" text="Thống kê">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="newcardButton" layoutX="349.0" layoutY="77.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="111.0" text="+ Thẻ mới">
+      <Button fx:id="newcardButton" layoutX="350.0" layoutY="77.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="111.0" text="+ Thẻ mới">
          <font>
             <Font size="14.0" />
          </font>
@@ -43,6 +38,11 @@
       <Label fx:id="countLabel" layoutX="200.0" layoutY="357.0" text="Today stats: ">
          <font>
             <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="titleLabel" layoutX="-1.0" layoutY="10.0" prefHeight="18.0" prefWidth="600.0" text="EngHUST" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
          </font>
       </Label>
    </children>

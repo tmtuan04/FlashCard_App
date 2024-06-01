@@ -1,0 +1,22 @@
+.root {
+    /*-fx-background: #44BC91;*/
+    -fx-font-family: "Poppins";
+}
+
+#titleLabel {
+    /*-fx-font-family: "Poppins";*/
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-font-size: 26px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #44BC91;
+}
+
+#titleText {
+    -fx-font-family: "Poppins";
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-font-size: 30px;
+    -fx-text-fill: #44BC91;
+    -fx-font-weight: 800;
+}
