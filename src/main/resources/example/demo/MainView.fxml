@@ -44,12 +44,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <ImageView fx:id="settingsButton" fitHeight="35.0" fitWidth="35.0" layoutX="531.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../assets/png/settings3.png" />
-         </image>
-      </ImageView>
-      <MenuBar fx:id="menubarMain" layoutY="1.0">
+      <MenuBar fx:id="menubarMain" layoutY="-2.0" prefHeight="26.0" prefWidth="137.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -69,5 +64,14 @@
         </menus>
       </MenuBar>
       <ScrollBar fx:id="scrollTest" layoutX="566.0" layoutY="138.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="14.0" />
+      <Button fx:id="settingButton" layoutX="552.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchtoSettings">
+         <graphic>
+            <ImageView fx:id="settingImg" fitHeight="26.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/png/settings3.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

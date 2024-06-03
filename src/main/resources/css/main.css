@@ -26,3 +26,19 @@
     -fx-background-color: #44bc91;
     -fx-background-radius: 16px;
 }
+
+#menubarMain {
+    /*-fx-background-color: #;*/
+    -fx-background-radius: 10px 0;
+    /* Lệnh này căn giữa trái - phải*/
+    -fx-alignment: center;
+    /*-fx-column-halignment: center;*/
+    -fx-text-alignment: center;
+    /*-fx-stroke: #44bc91;*/
+    /*-fx-stroke-width: 2;*/
+}
+
+/*#settingButton {*/
+/*    -fx-background-color: transparent;*/
+/*    -fx-graphic: url(png/settings3.png);*/
+/*}*/
