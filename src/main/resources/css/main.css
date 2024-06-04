@@ -12,7 +12,7 @@
     -fx-text-fill: #fff;
     /*-fx-font-family: "DVN-Poppins";*/
     /*Nó chỉ có 2 weight font */
-    /*-fx-font-weight: 800;*/
+    -fx-font-weight: bold;
     -fx-background-radius: 16px;
     -fx-background-color: #44bc91;
     /*Đang cân nhắc cho :hover ở đoạn này*/
@@ -25,6 +25,7 @@
     -fx-text-fill: #fff;
     -fx-background-color: #44bc91;
     -fx-background-radius: 16px;
+    -fx-font-weight: bold;
 }
 
 #menubarMain {
