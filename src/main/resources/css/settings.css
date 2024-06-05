@@ -4,3 +4,7 @@
     -fx-font-weight: 800;
 }
 
+#backtoMainButton {
+    -fx-background-color: transparent;
+}
+

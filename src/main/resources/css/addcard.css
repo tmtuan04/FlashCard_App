@@ -1,0 +1,34 @@
+#titleLabel {
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-text-fill: #44bc91;
+}
+
+#backButton {
+    /*Không cần nhúng ảnh này vì nó rất phức tạp và nhiều lỗi*/
+    -fx-background-color: transparent;
+
+}
+
+#frontLabel {
+    -fx-font-weight: bold;
+}
+
+#backLabel {
+    -fx-font-weight: bold;
+}
+
+#newDeckButton {
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+    -fx-background-radius: 16px;
+    -fx-background-color: #44bc91;
+}
+
+#addCardButton {
+    -fx-text-fill: #fff;
+    -fx-background-color: #44bc91;
+    -fx-background-radius: 16px;
+    -fx-font-weight: bold;
+}

@@ -39,7 +39,6 @@
     /*-fx-stroke-width: 2;*/
 }
 
-/*#settingButton {*/
-/*    -fx-background-color: transparent;*/
-/*    -fx-graphic: url(png/settings3.png);*/
-/*}*/
+#settingButton {
+    -fx-background-color: transparent;
+}

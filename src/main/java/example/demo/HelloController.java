@@ -31,4 +31,13 @@ public class HelloController {
         stage.setTitle("Settings");
         stage.show();
     }
+    @FXML
+    public void switchtoAddCard(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("AddCard.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Add Card");
+        stage.show();
+    }
 }
