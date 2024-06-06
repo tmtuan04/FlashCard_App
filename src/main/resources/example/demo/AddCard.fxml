@@ -13,12 +13,12 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/addcard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="example.demo.AddCardController">
    <children>
-      <Label fx:id="titleLabel" layoutX="227.0" layoutY="9.0" prefHeight="30.0" prefWidth="145.0" text="Thêm thẻ mới">
+      <Label fx:id="titleLabel" layoutX="227.0" layoutY="10.0" prefHeight="30.0" prefWidth="145.0" text="Thêm thẻ mới">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <ComboBox layoutX="38.0" layoutY="80.0" prefHeight="26.0" prefWidth="169.0" promptText="Chọn bộ thẻ" />
+      <ComboBox fx:id="selectDeck" layoutX="38.0" layoutY="80.0" prefHeight="26.0" prefWidth="169.0" promptText="Chọn bộ thẻ" />
       <Button fx:id="newDeckButton" layoutX="224.0" layoutY="80.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" text="+ Bộ thẻ mới" />
       <TableView layoutX="38.0" layoutY="123.0" prefHeight="230.0" prefWidth="293.0">
         <columns>
@@ -27,11 +27,11 @@
             <TableColumn prefWidth="120.00002441406252" text="Mặt sau" />
         </columns>
       </TableView>
-      <TextArea layoutX="375.0" layoutY="146.0" prefHeight="40.0" prefWidth="180.0" />
-      <Label fx:id="frontLabel" layoutX="358.0" layoutY="122.0" text="Mặt trước: " />
-      <Label fx:id="backLabel" layoutX="358.0" layoutY="206.0" text="Mặt sau: " />
-      <TextArea layoutX="375.0" layoutY="230.0" prefHeight="70.0" prefWidth="180.0" />
-      <Button fx:id="addCardButton" layoutX="432.0" layoutY="315.0" mnemonicParsing="false" text="Thêm thẻ" />
+      <TextArea layoutX="375.0" layoutY="135.0" prefHeight="53.0" prefWidth="180.0" />
+      <Label fx:id="frontLabel" layoutX="358.0" layoutY="114.0" text="Mặt trước: " />
+      <Label fx:id="backLabel" layoutX="358.0" layoutY="203.0" text="Mặt sau: " />
+      <TextArea layoutX="375.0" layoutY="225.0" prefHeight="83.0" prefWidth="180.0" />
+      <Button fx:id="addCardButton" layoutX="432.0" layoutY="320.0" mnemonicParsing="false" text="Thêm thẻ" />
       <Button fx:id="backButton" layoutX="6.0" layoutY="24.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="23.0" stylesheets="@../../css/addcard.css">
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">

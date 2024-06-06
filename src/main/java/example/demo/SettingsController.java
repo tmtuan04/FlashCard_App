@@ -2,33 +2,34 @@ package example.demo;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-// Cái này vẫn chỉ là chuyển scene, vẫn chưa phải là 2 window khác nhau
+// Giao diện này cung cấp phương thức initialize
+// cho phép bạn khởi tạo các thành phần sau khi chúng đã được tải từ tệp FXML.
 
-public class SettingsController {
-
-//    private Stage stage;
-//    private Scene scene;
-//    private Parent root;
+public class SettingsController implements Initializable {
 
     @FXML
     public void backtoMainButton(ActionEvent event) throws IOException {
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Image icon = new Image("/resources/assets/png/settings3.png");
+        stage.getIcons().add(icon);
         stage.close();
     }
 
-//    public void switchtoMain(ActionEvent event) throws IOException {
-//        root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
-//        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//        scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.show();
-//    }
+    @FXML
+    private ChoiceBox<String> languegeChoice;
+    private String[] languageItem = {"Viet Nam", "English", "China"};
+
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        languegeChoice.getItems().addAll(languageItem);
+    }
 }

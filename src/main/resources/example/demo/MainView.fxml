@@ -5,33 +5,33 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="example.demo.HelloController">
    <children>
-      <Button fx:id="statisticsButton" layoutX="127.0" layoutY="77.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="111.0" text="Thống kê">
+      <Button fx:id="statisticsButton" layoutX="127.0" layoutY="79.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="111.0" text="Thống kê">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="newcardButton" layoutX="350.0" layoutY="77.0" mnemonicParsing="false" onAction="#switchtoAddCard" prefHeight="35.0" prefWidth="111.0" text="+ Thẻ mới">
+      <Button fx:id="newcardButton" layoutX="350.0" layoutY="79.0" mnemonicParsing="false" onAction="#switchtoAddCard" prefHeight="35.0" prefWidth="111.0" text="+ Thẻ mới">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" />
-      <TableView layoutX="32.0" layoutY="139.0" prefHeight="200.0" prefWidth="534.0">
+      <TableView fx:id="tableView" layoutX="32.0" layoutY="139.0" prefHeight="200.0" prefWidth="538.0">
         <columns>
-          <TableColumn fx:id="nameColumn" prefWidth="157.60003662109375" text="Tên bộ thẻ" />
-          <TableColumn fx:id="newColumn" prefWidth="122.39996337890625" text="Thẻ mới" />
+          <TableColumn fx:id="nameColumn" prefWidth="140.0" text="Tên bộ thẻ" />
+          <TableColumn fx:id="newColumn" prefWidth="141.60003662109375" text="Thẻ mới" />
             <TableColumn fx:id="leanedColumn" minWidth="0.0" prefWidth="122.39996337890625" text="Thẻ đã học" />
-            <TableColumn fx:id="dueColumn" prefWidth="130.39996948242185" text="Thẻ đang học" />
+            <TableColumn fx:id="dueColumn" prefWidth="146.39999999999998" text="Thẻ đang học" />
         </columns>
       </TableView>
       <Label fx:id="countLabel" layoutX="200.0" layoutY="357.0" text="Today stats: ">
@@ -39,31 +39,39 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="titleLabel" layoutY="17.0" prefHeight="18.0" prefWidth="600.0" text="EngHUST" textAlignment="CENTER">
+      <Label fx:id="titleLabel" layoutY="28.0" prefHeight="18.0" prefWidth="600.0" text="EngHUST" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <MenuBar fx:id="menubarMain" layoutY="-2.0" prefHeight="26.0" prefWidth="137.0">
+      <MenuBar fx:id="menubarMain" prefHeight="26.0" prefWidth="215.0">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Tập tin">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem mnemonicParsing="false" text="Close">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="F4" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Chế độ xem">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" text="Full Screen">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F11" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Zoom In" />
+                  <MenuItem mnemonicParsing="false" text="Zoom out" />
+                  <MenuItem mnemonicParsing="false" text="Reset zoom" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+          <Menu mnemonicParsing="false" text="Giúp đỡ">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" text="About me" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
-      <ScrollBar fx:id="scrollTest" layoutX="566.0" layoutY="139.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="14.0" />
       <Button fx:id="settingButton" layoutX="545.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchtoSettings">
          <graphic>
             <ImageView fx:id="settingImg" fitHeight="26.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
