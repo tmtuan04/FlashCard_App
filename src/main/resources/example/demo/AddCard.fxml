@@ -24,14 +24,14 @@
         <columns>
           <TableColumn fx:id="sttCards" prefWidth="36.0" text="STT" />
           <TableColumn fx:id="frontCards" prefWidth="124.0" text="Mặt trước" />
-            <TableColumn prefWidth="135.20001220703125" text="Mặt sau" />
+            <TableColumn fx:id="backCards" prefWidth="135.20001220703125" text="Mặt sau" />
         </columns>
       </TableView>
       <TextArea layoutX="375.0" layoutY="135.0" prefHeight="53.0" prefWidth="180.0" />
       <Label fx:id="frontLabel" layoutX="358.0" layoutY="114.0" text="Mặt trước: " />
       <Label fx:id="backLabel" layoutX="358.0" layoutY="203.0" text="Mặt sau: " />
       <TextArea layoutX="375.0" layoutY="225.0" prefHeight="83.0" prefWidth="180.0" />
-      <Button fx:id="addCardButton" layoutX="431.0" layoutY="319.0" mnemonicParsing="false" text="Xác nhận" />
+      <Button fx:id="addCardButton" layoutX="431.0" layoutY="322.0" mnemonicParsing="false" text="Xác nhận" />
       <Button fx:id="backButton" layoutX="6.0" layoutY="24.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="23.0" stylesheets="@../../css/addcard.css">
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">

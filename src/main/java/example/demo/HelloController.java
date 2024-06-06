@@ -60,7 +60,6 @@ public class HelloController implements Initializable {
         newColumn.setCellValueFactory(new PropertyValueFactory<>("newColumn"));
         leanedColumn.setCellValueFactory(new PropertyValueFactory<>("leanedColumn"));
         dueColumn.setCellValueFactory(new PropertyValueFactory<>("dueColumn"));
-        tableView.setStyle("-fx-alignment: CENTER;");
         tableView.setItems(list);
     }
 

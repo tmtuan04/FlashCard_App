@@ -2,6 +2,7 @@ package model;
 
 public class TableViewAddCard {
 
+//    Lớp này xử lý cái
 //    Để thử cái tên khác để check lại cái hàm
     int STT;
     String front, back;

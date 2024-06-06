@@ -35,3 +35,7 @@
     -fx-background-radius: 16px;
     -fx-font-weight: bold;
 }
+
+#tableView .table-column {
+    -fx-alignment: center;
+}

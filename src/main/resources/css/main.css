@@ -42,3 +42,8 @@
 #settingButton {
     -fx-background-color: transparent;
 }
+
+/*Đã căn giữa thành công*/
+#tableView .table-column {
+    -fx-alignment: center;
+}
