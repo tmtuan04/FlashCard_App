@@ -4,6 +4,7 @@ module example.demo {
 
 
     opens example.demo to javafx.fxml;
+//    phải open model vào
     opens model to javafx.base;
     exports example.demo;
 }

@@ -31,7 +31,7 @@
           <TableColumn fx:id="nameColumn" prefWidth="140.0" text="Tên bộ thẻ" />
           <TableColumn fx:id="newColumn" prefWidth="141.60003662109375" text="Thẻ mới" />
             <TableColumn fx:id="leanedColumn" minWidth="0.0" prefWidth="122.39996337890625" text="Thẻ đã học" />
-            <TableColumn fx:id="dueColumn" prefWidth="146.39999999999998" text="Thẻ đang học" />
+            <TableColumn fx:id="dueColumn" prefWidth="132.80002441406248" text="Thẻ đang học" />
         </columns>
       </TableView>
       <Label fx:id="countLabel" layoutX="200.0" layoutY="357.0" text="Today stats: ">

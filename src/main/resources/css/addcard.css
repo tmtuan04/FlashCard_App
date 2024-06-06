@@ -23,7 +23,10 @@
     -fx-text-fill: #fff;
     -fx-font-weight: bold;
     -fx-background-radius: 16px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
     -fx-background-color: #44bc91;
+    -fx-font-size: 12px;
 }
 
 #addCardButton {

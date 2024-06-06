@@ -1,5 +1,7 @@
 package model;
 
+// Lớp này liên quan đến TableView trong MainWindow
+
 public class TableViewMain {
 
     String nameColumn;
