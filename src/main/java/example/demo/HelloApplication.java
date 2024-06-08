@@ -20,8 +20,8 @@ public class HelloApplication extends Application {
         scene.getStylesheets().add(css);
 
         stage.setTitle("EngHUST");
-        stage.getIcons().add(new Image("/src/main/resources/assets/png/logo.png"));
-
+//        Đã được
+        stage.getIcons().add(new Image("/logo.png"));
         stage.setScene(scene);
         stage.show();
     }
