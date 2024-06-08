@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="412.0" prefWidth="352.0" stylesheets="@../../css/settings.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="example.demo.SettingsController">
+<AnchorPane fx:id="scenePane" prefHeight="412.0" prefWidth="352.0" stylesheets="@../../css/settings.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="example.demo.SettingsController">
    <children>
       <Label fx:id="settingTitle" layoutX="125.0" layoutY="14.0" text="Cài đặt">
          <font>
@@ -25,16 +25,17 @@
             </ImageView>
          </graphic>
       </Button>
-      <CheckBox fx:id="darkmodeCheck" layoutX="56.0" layoutY="147.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="Chế độ tối">
+      <CheckBox fx:id="darkmodeCheck" layoutX="56.0" layoutY="138.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="Chế độ tối">
          <font>
             <Font size="14.0" />
          </font>
       </CheckBox>
-      <ChoiceBox fx:id="languegeChoice" layoutX="143.0" layoutY="98.0" prefHeight="26.0" prefWidth="148.0" />
-      <Label layoutX="56.0" layoutY="98.0" text="Ngôn ngữ: ">
+      <ChoiceBox fx:id="languegeChoice" layoutX="143.0" layoutY="87.0" prefHeight="26.0" prefWidth="148.0" />
+      <Label layoutX="56.0" layoutY="87.0" text="Ngôn ngữ: ">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
+      <Button fx:id="confirmButton" layoutX="144.0" layoutY="358.0" mnemonicParsing="false" onAction="#confirmChanges" text="Xác nhận" />
    </children>
 </AnchorPane>

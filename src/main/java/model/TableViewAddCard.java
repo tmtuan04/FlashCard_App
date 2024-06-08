@@ -4,8 +4,8 @@ public class TableViewAddCard {
 
 //    Lớp này xử lý cái
 //    Để thử cái tên khác để check lại cái hàm
-    int STT;
-    String front, back;
+    private int STT;
+    private String front, back;
 
     public TableViewAddCard(int STT, String front, String back) {
         this.STT = STT;

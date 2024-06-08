@@ -1,21 +1,35 @@
 package example.demo;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.Node;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import model.TableViewAddCard;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
 public class AddCardController implements Initializable {
+
+    private Stage stage;
+
+//    Thêm nút backButton
+    @FXML
+    private void backButton(ActionEvent event) throws IOException {
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.close();
+    };
 
 //  Chỉ là demo
 //  Ở đây mình demo thêm cards vào table ở cửa sổ Add Card
@@ -81,5 +95,50 @@ public class AddCardController implements Initializable {
                 tableView.setItems(deckData.get(selectedDeck));
             }
         });
+    }
+
+
+    @FXML
+    private TextArea frontText;
+
+    @FXML
+    private TextArea backText;
+
+    @FXML
+    private Button addCardButton;
+
+    @FXML
+    private void addCardtoTable() {
+        String selectedDeck = selectDeck.getSelectionModel().getSelectedItem();
+        if (selectedDeck != null && deckData.containsKey(selectedDeck)) {
+            ObservableList<TableViewAddCard> selectedDeckCards = deckData.get(selectedDeck);
+
+            String front = frontText.getText();
+            String back = backText.getText();
+
+            if (!front.isEmpty() && !back.isEmpty()) {
+                int newStt = selectedDeckCards.size() + 1; // Đặt số thứ tự mới cho thẻ
+                TableViewAddCard newCard = new TableViewAddCard(newStt, front, back);
+
+                selectedDeckCards.add(newCard);
+                tableView.setItems(selectedDeckCards); // Cập nhật TableView
+
+                frontText.clear();
+                backText.clear();
+
+                savetoJsonFile();
+            }
+        }
+    }
+
+    private void savetoJsonFile() {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String filePath = "flashcards.json";
+        try (FileWriter fileWriter = new FileWriter(filePath)) {
+            gson.toJson(deckData, fileWriter);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

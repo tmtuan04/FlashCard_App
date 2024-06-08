@@ -1,0 +1,75 @@
+{
+  "Deck 4": [
+    {
+      "STT": 1,
+      "front": "Thanks",
+      "back": "Cảm ơn"
+    },
+    {
+      "STT": 2,
+      "front": "Divide",
+      "back": "Chia"
+    },
+    {
+      "STT": 3,
+      "front": "Preferences",
+      "back": "Sở thích"
+    }
+  ],
+  "Deck 3": [
+    {
+      "STT": 1,
+      "front": "Please",
+      "back": "Vui lòng"
+    },
+    {
+      "STT": 2,
+      "front": "Multiply",
+      "back": "Nhân"
+    },
+    {
+      "STT": 3,
+      "front": "Settings",
+      "back": "Cài đặt"
+    }
+  ],
+  "Deck 2": [
+    {
+      "STT": 1,
+      "front": "Goodbye",
+      "back": "Tạm biệt"
+    },
+    {
+      "STT": 2,
+      "front": "Subtract",
+      "back": "Trừ"
+    },
+    {
+      "STT": 3,
+      "front": "Options",
+      "back": "Tùy chọn"
+    },
+    {
+      "STT": 4,
+      "front": "tuan",
+      "back": "dep trai"
+    }
+  ],
+  "Deck 1": [
+    {
+      "STT": 1,
+      "front": "Hello",
+      "back": "Xin chào"
+    },
+    {
+      "STT": 2,
+      "front": "Add",
+      "back": "Cộng, thêm"
+    },
+    {
+      "STT": 3,
+      "front": "Setting",
+      "back": "Cài đặt"
+    }
+  ]
+}
