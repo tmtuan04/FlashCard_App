@@ -31,6 +31,16 @@
       "STT": 3,
       "front": "Settings",
       "back": "Cài đặt"
+    },
+    {
+      "STT": 4,
+      "front": "tuan",
+      "back": "dep trai"
+    },
+    {
+      "STT": 5,
+      "front": "hehe",
+      "back": "dep trai"
     }
   ],
   "Deck 2": [
@@ -70,6 +80,11 @@
       "STT": 3,
       "front": "Setting",
       "back": "Cài đặt"
+    },
+    {
+      "STT": 4,
+      "front": "tu minh tuan",
+      "back": "dep trai"
     }
   ]
 }

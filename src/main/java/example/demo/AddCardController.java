@@ -2,6 +2,7 @@ package example.demo;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,9 +14,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.TableViewAddCard;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -33,6 +36,7 @@ public class AddCardController implements Initializable {
 
 //  Chỉ là demo
 //  Ở đây mình demo thêm cards vào table ở cửa sổ Add Card
+
     @FXML
     private ComboBox<String> selectDeck;
 
@@ -49,6 +53,7 @@ public class AddCardController implements Initializable {
     private TableColumn<TableViewAddCard, String> backCards;
 
 //   Ở đây tham khảo chatGPT, ta sẽ chọn Deck trong ComboBox thì nói mới hiển thị thông tin
+
     private Map<String, ObservableList<TableViewAddCard>> deckData;
 
     public AddCardController() {
@@ -81,7 +86,11 @@ public class AddCardController implements Initializable {
 
 
     public void initialize(URL arg0, ResourceBundle arg1) {
-//      Nhưng mà như này chỉ là hiện thị mặc định, chứ không phải chọn rồi nó mới hiển thị
+
+        loadFromJsonFile();
+
+        ArrayList<String> list = new ArrayList<>();
+
         sttCards.setCellValueFactory(new PropertyValueFactory<>("STT"));
         frontCards.setCellValueFactory(new PropertyValueFactory<>("front"));
         backCards.setCellValueFactory(new PropertyValueFactory<>("back"));
@@ -89,6 +98,7 @@ public class AddCardController implements Initializable {
         selectDeck.getItems().addAll(deckListItem);
 
 //      Mình cũng chưa hiểu cái này lắm
+
         selectDeck.setOnAction(event -> {
             String selectedDeck = selectDeck.getSelectionModel().getSelectedItem();
             if (selectedDeck != null && deckData.containsKey(selectedDeck)) {
@@ -131,13 +141,39 @@ public class AddCardController implements Initializable {
         }
     }
 
+//    Demo lưu file
+
+
+    public void loadFromJsonFile() {
+        Gson gson = new Gson();
+        String filePath = "flashcards.json";
+        try (FileReader fileReader = new FileReader(filePath)) {
+            // Chuyển đổi dữ liệu từ file JSON sang Map với ArrayList
+            Map<String, ArrayList<TableViewAddCard>> loadDeckData = gson.fromJson(fileReader,
+                    new TypeToken<Map<String, ArrayList<TableViewAddCard>>>() {}.getType());
+            if (loadDeckData != null) {
+                deckData.clear();
+                // Chuyển đổi từ ArrayList sang ObservableList
+                for (Map.Entry<String, ArrayList<TableViewAddCard>> entry : loadDeckData.entrySet()) {
+                    deckData.put(entry.getKey(), FXCollections.observableArrayList(entry.getValue()));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void savetoJsonFile() {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String filePath = "flashcards.json";
         try (FileWriter fileWriter = new FileWriter(filePath)) {
-            gson.toJson(deckData, fileWriter);
-        }
-        catch (IOException e) {
+            // Chuyển đổi từ ObservableList sang ArrayList trước khi lưu
+            Map<String, ArrayList<TableViewAddCard>> saveDeckData = new HashMap<>();
+            for (Map.Entry<String, ObservableList<TableViewAddCard>> entry : deckData.entrySet()) {
+                saveDeckData.put(entry.getKey(), new ArrayList<>(entry.getValue()));
+            }
+            gson.toJson(saveDeckData, fileWriter);
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
