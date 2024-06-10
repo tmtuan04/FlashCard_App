@@ -25,7 +25,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <CheckBox fx:id="darkmodeCheck" layoutX="56.0" layoutY="138.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="Chế độ tối">
+      <CheckBox fx:id="darkmodeCheck" layoutX="56.0" layoutY="138.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="    Chế độ tối">
          <font>
             <Font size="14.0" />
          </font>

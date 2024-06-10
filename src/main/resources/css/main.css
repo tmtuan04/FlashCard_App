@@ -2,6 +2,7 @@
     -fx-font-family: "Poppins";
     -fx-text-alignment: center;
     -fx-alignment: center;
+    /*-fx-font-weight: bold;*/
     -fx-font-size: 26px;
     -fx-font-weight: 700;
     -fx-text-fill: #44bc91;
@@ -10,13 +11,9 @@
 
 #newcardButton {
     -fx-text-fill: #fff;
-    /*-fx-font-family: "DVN-Poppins";*/
-    /*Nó chỉ có 2 weight font */
     -fx-font-weight: bold;
     -fx-background-radius: 16px;
     -fx-background-color: #44bc91;
-    /*Đang cân nhắc cho :hover ở đoạn này*/
-    /*-fx-cursor: pointer;*/
     -fx-text-alignment: center;
     -fx-alignment: center;
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10,0,0,1 );

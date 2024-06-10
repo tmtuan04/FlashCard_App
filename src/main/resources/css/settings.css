@@ -21,3 +21,9 @@
     -fx-font-weight: bold;
 }
 
+#languegeChoice {
+    /*-fx-background-color: transparent;*/
+    -fx-border-radius: 5px;
+    -fx-border-color: grey;
+}
+
