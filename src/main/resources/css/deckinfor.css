@@ -1,0 +1,119 @@
+#deckName {
+    -fx-font-family: Poppins;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #44bc91;
+}
+
+#contextPane {
+    -fx-border-radius: 14px;
+    -fx-border-color: #44bc91;
+    -fx-border-width: 3px;
+    /*-fx-background-color: transparent;*/
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.1) , 10,0,0,1 );
+}
+
+Label {
+    -fx-font-family: Poppins;
+}
+
+#newLabel {
+    -fx-font-weight: bold;
+    -fx-underline: true;
+}
+
+#learnedLabel {
+    -fx-font-weight: bold;
+    -fx-text-fill: #799351;
+    -fx-underline: true;
+}
+
+#dueLabel {
+    -fx-font-weight: bold;
+    -fx-text-fill: #EE4E4E;
+    -fx-underline: true;
+}
+
+#valueNew {
+    -fx-font-weight: bold;
+}
+
+#valueLearned {
+    -fx-font-weight: bold;
+    -fx-text-fill: #799351;
+}
+
+#valueDue {
+    -fx-font-weight: bold;
+    -fx-text-fill: #EE4E4E;
+}
+
+#backButton {
+    -fx-background-color: transparent;
+}
+
+#customLabel {
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-text-fill: #799351;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.1) , 10,0,0,1 );
+}
+
+#customLabel:pressed:hover {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
+#customLabel:hover {
+    /*-fx-background-color: #40A578;*/
+    -fx-scale-y: 1.1;
+}
+
+#deleteDeckLabel {
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-text-fill: #EE4E4E;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.1) , 10,0,0,1 );
+}
+
+#deleteDeckLabel:pressed:hover {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
+#deleteDeckLabel:hover {
+    /*-fx-background-color: #40A578;*/
+    -fx-scale-y: 1.1;
+}
+
+#learnButton {
+    -fx-text-fill: #fff;
+    -fx-background-color: #44bc91;
+    -fx-background-radius: 16px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10,0,0,1 );
+}
+#learnButton:pressed:hover {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
+#learnButton:hover {
+    -fx-scale-y: 1.1;
+}
+
+#testButton {
+    -fx-text-fill: #fff;
+    -fx-background-color: #EE4E4E;
+    -fx-background-radius: 16px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10,0,0,1 );
+}
+#testButton:pressed:hover {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
+#testButton:hover {
+    -fx-scale-y: 1.1;
+}

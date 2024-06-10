@@ -5,12 +5,12 @@ package model;
 public class TableViewMain {
 
     String nameColumn;
-    int newColumn, leanedColumn, dueColumn;
+    int newColumn, learnedColumn, dueColumn;
 
-    public TableViewMain(String nameColumn, int newColumn, int leanedColumn, int dueColumn) {
+    public TableViewMain(String nameColumn, int newColumn, int learnedColumn, int dueColumn) {
         this.nameColumn = nameColumn;
         this.newColumn = newColumn;
-        this.leanedColumn = leanedColumn;
+        this.learnedColumn = learnedColumn;
         this.dueColumn = dueColumn;
     }
 
@@ -30,12 +30,12 @@ public class TableViewMain {
         this.newColumn = newColumn;
     }
 
-    public int getLeanedColumn() {
-        return leanedColumn;
+    public int getLearnedColumn() {
+        return learnedColumn;
     }
 
-    public void setLeanedColumn(int leanedColumn) {
-        this.leanedColumn = leanedColumn;
+    public void setLearnedColumn(int learnedColumn) {
+        this.learnedColumn = learnedColumn;
     }
 
     public int getDueColumn() {

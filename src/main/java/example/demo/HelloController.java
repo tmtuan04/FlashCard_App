@@ -9,8 +9,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
 import model.TableViewMain;
 
@@ -34,7 +36,7 @@ public class HelloController implements Initializable {
     private TableColumn<TableViewMain, Integer> newColumn;
 
     @FXML
-    private TableColumn<TableViewMain, Integer> leanedColumn;
+    private TableColumn<TableViewMain, Integer> learnedColumn;
 
     @FXML
     private TableColumn<TableViewMain, Integer> dueColumn;
@@ -58,9 +60,39 @@ public class HelloController implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("nameColumn"));
         newColumn.setCellValueFactory(new PropertyValueFactory<>("newColumn"));
-        leanedColumn.setCellValueFactory(new PropertyValueFactory<>("leanedColumn"));
+        learnedColumn.setCellValueFactory(new PropertyValueFactory<>("learnedColumn"));
         dueColumn.setCellValueFactory(new PropertyValueFactory<>("dueColumn"));
         tableView.setItems(list);
+
+        // Thêm sự kiện bấm vào hàng
+        tableView.setRowFactory(tv -> {
+            TableRow<TableViewMain> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (!row.isEmpty() && event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
+                    TableViewMain clickedRow = row.getItem();
+                    openDeckInforWindow(clickedRow);
+                }
+            });
+            return row;
+        });
+    }
+
+    private void openDeckInforWindow(TableViewMain selectedItem) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("DeckInfor.fxml"));
+            Parent root = loader.load();
+
+            // Lấy controller của DeckInfor.fxml
+            DeckInforController controller = loader.getController();
+            controller.setDeckInfo(selectedItem);
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Deck Infor");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

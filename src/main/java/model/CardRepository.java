@@ -2,6 +2,8 @@ package model;
 
 // Lớp này chịu trách nhiệm lưu trữ và truy xuất dữ lệu từ file gson (mình nghĩ thế)
 
+// Lớp này chưa động đến
+
 import java.util.ArrayList;
 import java.util.List;
 

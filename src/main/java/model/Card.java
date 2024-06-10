@@ -5,6 +5,8 @@ package model;
 // Đây là đại diện cho một thẻ flashcard, bao gồm các thuộc tính:
 // Câu hỏi, câu trả lời, danh mục hoặc mức độ ưu tiên
 
+// Class này chưa động đến
+
 public class Card {
 
     private String question;
@@ -18,6 +20,7 @@ public class Card {
         this.category = category;
         this.priority = priority;
     }
+
 
     public String getQuestion() {
         return question;

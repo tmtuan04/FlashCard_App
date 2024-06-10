@@ -3,6 +3,7 @@ package model;
 // Lớp này đại diện cho một bộ thẻ flashcard
 // Nó chứa một danh sách các flashcard và các phương thức để thao tác với danh sách này
 
+// Lớp này chưa động đến
 
 import java.util.ArrayList;
 import java.util.List;
